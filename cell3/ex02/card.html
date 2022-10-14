@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rome´s Calculator</title>
+    <link rel="stylesheet" href="estilo.css" src="estilo.css">
+    <script>
+        var resultado;
+
+        function sumar(){
+            var primero = parseInt((document.getElementById('izqu').value),10);
+            var segundo = parseInt((document.getElementById('der').value),10);
+
+            resultado=(primero+segundo);
+        }
+
+        function restar(){
+            var primero = parseInt((document.getElementById('izqu').value),10);
+            var segundo = parseInt((document.getElementById('der').value),10);
+            resultado=primero-segundo;
+        }
+
+        function multiplicar(){
+            var primero = parseInt((document.getElementById('izqu').value),10);
+            var segundo = parseInt((document.getElementById('der').value),10);
+            resultado=primero*segundo;
+        }
+
+        function dividir(){
+            var primero = parseInt((document.getElementById('izqu').value),10);
+            var segundo = parseInt((document.getElementById('der').value),10);
+  
+
+            if (segundo==0){
+                resultado="It´s over 9000!!"
+            }else{
+                resultado=primero/segundo;
+            }
+        }
+
+        function resto(){
+            var primero = parseInt((document.getElementById('izqu').value),10);
+            var segundo = parseInt((document.getElementById('der').value),10);
+
+            if (segundo==0){
+                resultado="It´s over 9000!!"
+            }else{
+                resultado=primero%segundo;
+            }
+        }
+
+        function bordear(boton){
+            var operacion=document.getElementById(boton);
+            operacion.style.border="5px solid";
+            desBordear(boton);
+        }
+
+        function desBordear(pulsado){
+            var operacion=document.getElementById(pulsado);
+            var desOperacion=document.getElementById('sumar');
+
+            if(operacion!= desOperacion){
+                desOperacion.style.border="2px solid";
+            }
+            desOperacion=document.getElementById('restar')
+            if(operacion!=desOperacion){
+                desOperacion.style.border="2px solid";
+            }
+            desOperacion=document.getElementById('multiplicar'); 
+            if(operacion!=desOperacion){
+                desOperacion.style.border="2px solid";
+            }
+            desOperacion=document.getElementById('dividir');
+
+            if(operacion!=desOperacion){
+                desOperacion.style.border="2px solid";
+            }
+            desOperacion=document.getElementById('resto'); 
+
+            if(operacion!=desOperacion){
+                desOperacion.style.border="2px solid";
+            }
+        }
+
+        function mensaje(){
+            window.alert('El resultado es: ' + resultado);
+            desBordear(this.id);
+            console.log('El resultado es: ' + resultado);
+        }
+
+        function comprobar(){
+            var primero = parseInt((document.getElementById('izqu').value),10);
+            var segundo = parseInt((document.getElementById('der').value),10);
+            if(primero <0 || segundo <0){
+                resultado="Error ;("
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <td><h1>Rome`s Calculator</h1></td>
+            </tr>
+            <tr>
+                <td class="digitos"><input type="number" id="izqu">||<input type="number" id="der"></td>
+            </tr>
+            <tr>
+                <td class="operaciones">
+                    <button id="sumar" onclick="bordear(this.id), sumar()">+</button>
+                    <button id="restar" onclick="bordear(this.id), restar()">-</button>
+                    <button id="multiplicar" onclick="bordear(this.id), multiplicar()">x</button>
+                    <button id="dividir" onclick="bordear(this.id), dividir()">/</button>
+                    <button id="resto" onclick="bordear(this.id), resto()">%</button>
+                </td>
+            </tr>
+            <tr class="Contenedor">
+                <td class="Boton">
+                    <button onclick= "comprobar(), mensaje()";>Calcular</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

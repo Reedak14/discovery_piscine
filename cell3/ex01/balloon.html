@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #globo {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: auto;
+            border-radius: 100px;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            place-items: center;
+            display: grid;
+            margin-top: 250px;
+        }
+
+        html {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+    <script>
+        var tamaño = 200;
+        
+        function aumentar() {
+            var globo = document.getElementById('globo');
+
+            if (globo.style.backgroundColor=="red"){
+                globo.style.backgroundColor="green";
+            }else if (globo.style.backgroundColor=="green"){
+                globo.style.backgroundColor="blue";
+            }else{
+                globo.style.backgroundColor="red";
+            }
+
+            if (tamaño <= 420){
+                tamaño=tamaño+10;
+                globo.style.width = tamaño + "px";
+                globo.style.height = tamaño + "px";
+                globo.style.borderRadius = (tamaño/2) + "px";
+            }else{
+                tamaño = 200;
+                globo.style.width = tamaño + "px";
+                globo.style.height = tamaño + "px";
+                globo.style.borderRadius = (tamaño/2) + "px";
+            }
+        }
+
+        function disminuir() {
+            var globo = document.getElementById('globo');
+
+            if (tamaño > 200) {
+                tamaño = tamaño -5;
+                globo.style.width = tamaño + "px";
+                globo.style.height = tamaño + "px";
+                globo.style.borderRadius = (tamaño/2) + "px";
+            }
+            else {
+                globo.style.backgroundColor = "red";
+            }
+            if (tamaño > 200) {
+                if (globo.style.backgroundColor=="red"){
+                    globo.style.backgroundColor="blue";
+                }else if (globo.style.backgroundColor=="green"){
+                    globo.style.backgroundColor="red";
+                }else{
+                    globo.style.backgroundColor="green";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="globo" onclick="aumentar()" onmouseleave="disminuir()"></div>
+</body>
+</html>

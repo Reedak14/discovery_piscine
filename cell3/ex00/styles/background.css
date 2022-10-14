@@ -1,0 +1,36 @@
+body {
+    background-color: blue;
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        transform: scale(1,1) translate(0px, 0px);
+    }
+
+    30%{
+        transform: scale(1,0.8) translate(0px, 10px); 
+    }
+
+    75%{
+        transform: scale(1,1.1) translate(0px, -25px); 
+    }
+
+    100% {  
+        transform: scale(1,1) translate(0px, 0px);
+    }
+}
+
+.btn {
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    margin-top: 50vh;
+    -webkit-animation: bounce 0.75s infinite;
+}
+
+.btn-btn {
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+}
+
