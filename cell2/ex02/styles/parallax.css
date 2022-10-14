@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.parallax1 {
+    background-image: url(https://wallpapercave.com/wp/wp8973557.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+}
+
+.parallax2 {
+    background-image: url(https://i.kym-cdn.com/entries/icons/facebook/000/039/362/cristianoacceptingawardheader.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 1200px;
+}
+
+.box {
+    height: 500px;
+    background-color: black;
+    text-align: center;
+    align-items: center;
+    border: 1px solid black;
+    position: relative;
+}
+
+.text1 {
+    text-align: center;
+    align-items: center;
+    color:gold;
+    margin: 0%;
+    padding-top: 600px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.text2 {
+    color: gold;
+    justify-content: center;
+    text-align: center;
+    margin-top: 250px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+.text3 {
+    margin: 0%;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    color: gold;
+    padding-top: 600px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
