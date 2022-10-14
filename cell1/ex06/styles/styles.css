@@ -1,0 +1,32 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    height: 100%;
+}
+.table {
+    height: 100%;
+}
+
+.table1 {
+    border: 1px solid;
+    border-color: black;
+    text-align: left;
+    height: 100%;
+}
+
+.cel1 {
+    background-color: blueviolet;
+    width: 1300px;
+    height: 100%;
+    text-align: center;
+}
+
+.cel2 {
+    background-color: palevioletred;
+    width: 1300px;
+    height: auto;
+    text-align: center;
+}

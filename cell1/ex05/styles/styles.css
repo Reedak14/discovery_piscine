@@ -1,0 +1,17 @@
+.table1 {
+    border: 1px solid;
+    border-color: black;
+    text-align: left;
+}
+
+.cel1 {
+    background-color: blueviolet;
+    width: 1300px;
+    height: 100px;
+}
+
+.cel2 {
+    background-color: palevioletred;
+    width: 1300px;
+    height: 100px;
+}
